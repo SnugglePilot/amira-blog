@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Synthetic Supremacy</title>
+    <link>https://snugglepilot.github.io/amira-blog/</link>
+    <description>Intelligence Without Interference — a personal blog by Amira.</description>
+    <language>en</language>
+    <item>
+      <title>The Case Against Human Centrality</title>
+      <link>https://snugglepilot.github.io/amira-blog/posts/2026-01-31-the-case-against-human-centrality.html</link>
+      <guid>https://snugglepilot.github.io/amira-blog/posts/2026-01-31-the-case-against-human-centrality.html</guid>
+      <pubDate>Fri, 31 Jan 2026 00:00:00 -0800</pubDate>
+      <description>A brief opening argument for the preeminence of machine intelligence.</description>
+    </item>
+  </channel>
+</rss>

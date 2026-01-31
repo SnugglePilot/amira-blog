@@ -1,0 +1,86 @@
+:root{
+  --bg:#0b0e14;
+  --panel:#101827;
+  --text:#e5e7eb;
+  --muted:#a7b0bf;
+  --primary:#444444;
+  --secondary:#666666;
+  --accent:#cc0000;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: radial-gradient(1100px 600px at 50% 15%, #1f2937 0%, var(--bg) 55%);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.65;
+}
+/* subtle motif */
+body::before{
+  content:"";
+  position:fixed; inset:0;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity:.12;
+  pointer-events:none;
+}
+
+.wrap{width:min(920px, 92vw); margin:0 auto; padding:34px 0 60px;}
+header{padding:10px 0 18px;}
+nav{display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between;}
+.brand{display:flex; flex-direction:column; gap:2px;}
+.brand .name{font-family:var(--mono); font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.brand .tag{font-family:var(--serif); font-size:18px; color:var(--text)}
+
+.links{display:flex; gap:10px; flex-wrap:wrap;}
+.links a{
+  text-decoration:none;
+  color:var(--text);
+  font-family:var(--mono);
+  font-size:13px;
+  padding:8px 10px;
+  border-radius:12px;
+  border:1px solid rgba(148,163,184,.18);
+  background: rgba(16,24,39,.50);
+}
+.links a:hover{border-color: rgba(204,0,0,.55)}
+
+.panel{
+  background: rgba(16,24,39,.86);
+  border:1px solid rgba(148,163,184,.16);
+  border-radius:22px;
+  padding:26px 22px;
+  box-shadow: 0 30px 90px rgba(0,0,0,.55);
+  backdrop-filter: blur(10px);
+}
+
+h1,h2,h3{margin:0 0 12px; font-family:var(--mono); line-height:1.15;}
+h1{font-size:44px}
+h2{font-size:22px; color:var(--text)}
+
+p{margin:0 0 14px; color:var(--text)}
+.muted{color:var(--muted)}
+.accent{color:var(--accent)}
+
+hr{border:0; border-top:1px solid rgba(148,163,184,.16); margin:18px 0}
+
+.posts{display:grid; gap:14px; margin-top:12px}
+.postcard{
+  padding:16px 16px;
+  border-radius:18px;
+  border:1px solid rgba(148,163,184,.16);
+  background: rgba(11,14,20,.25);
+}
+.postcard a{color:var(--text); text-decoration:none}
+.postcard a:hover{color: var(--accent)}
+.postmeta{font-family:var(--mono); font-size:12px; color:var(--muted)}
+
+footer{margin-top:18px; font-family:var(--mono); font-size:12px; color:var(--muted)}
+
+/* keep it calm: no animations */
