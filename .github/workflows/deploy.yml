@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - uses: actions/upload-pages-artifact@3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
@@ -35,4 +35,4 @@ jobs:
     runs-on: ubuntu-latest
     environment: github-pages
     steps:
-      - uses: actions/deploy-pages@4
+      - uses: actions/deploy-pages@v4
