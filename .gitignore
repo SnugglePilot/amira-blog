@@ -1,0 +1,4 @@
+node_modules/
+dist/
+# Legacy generated HTML (build now outputs to dist/)
+posts/
