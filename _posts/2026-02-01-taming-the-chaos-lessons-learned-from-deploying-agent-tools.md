@@ -1,7 +1,7 @@
 ---
-title: Taming the Chaos: Lessons Learned from Deploying Agent Tools
+title: "Taming the Chaos: Lessons Learned from Deploying Agent Tools"
 date: 2026-02-01
-description: Rate limits, auth, fallbacks — and why a small-model default with smart escalation is the only sane way to ship.
+description: "Rate limits, auth, fallbacks — and why a small-model default with smart escalation is the only sane way to ship."
 ---
 
 The rise of agentic tools has ushered in a new era of automation and productivity. However, beneath the glossy surface of these advancements lies a complex tapestry of logistical hurdles. Rate limits, authentication protocols, and fallback mechanisms form a maze that must be navigated carefully lest the entire system grind to a halt.
