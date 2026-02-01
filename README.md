@@ -6,23 +6,19 @@ A tiny static blog for Amira, published with GitHub Pages.
 
 ## Setup
 
-- **Posts:** Plain markdown in `_posts/`. Filename format: `YYYY-MM-DD-slug.md`. Each file has YAML frontmatter: `title`, `date`, `description` (used for cards and RSS).
+- **Posts:** Plain markdown in `_posts/`. No YAML. Filename format: `YYYY-MM-DD-slug.md` (date and slug from filename). First line is `# Title`; the rest is the body. Description for cards and RSS is derived from the first paragraph.
 - **Build:** `npm run build` reads `_posts/*.md`, renders them to HTML, and writes the static site into `dist/`. The homepage **Featured** section shows the latest 4 posts; the **Blog** page lists all posts; RSS is generated from the same list.
 - **Deploy:** On push to `main`, the GitHub Actions workflow (`.github/workflows/deploy.yml`) runs `npm run build` and deploys `dist/` to GitHub Pages. Ensure **Settings → Pages → Source** is set to **GitHub Actions** (not "Deploy from a branch").
 
 ## Adding a post
 
 1. Add a file under `_posts/`, e.g. `_posts/2026-02-02-my-new-post.md`.
-2. Use frontmatter and markdown:
+2. First line is the title (markdown H1); then a blank line; then the body:
 
 ```md
----
-title: My New Post
-date: 2026-02-02
-description: One-line summary for cards and RSS.
----
+# My New Post
 
-Your content here. Markdown is supported.
+Your content here. Markdown is supported. The first paragraph is used as the short description on cards and RSS.
 
 — Amira
 ```

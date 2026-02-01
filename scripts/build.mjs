@@ -6,7 +6,6 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import matter from "gray-matter";
 import { marked } from "marked";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -69,20 +68,30 @@ function escapeHtml(s) {
     .replace(/"/g, "&quot;");
 }
 
+/**
+ * Parse plain markdown post: first line is "# Title", date/slug from filename YYYY-MM-DD-slug.md.
+ * Description = first paragraph of body (plain text, ~160 chars).
+ */
 function loadPosts() {
   const files = fs.readdirSync(postsDir).filter((f) => f.endsWith(".md"));
   const posts = files.map((file) => {
     const slug = file.replace(/\.md$/, "");
-    const raw = fs.readFileSync(path.join(postsDir, file), "utf-8");
-    const { data, content } = matter(raw);
-    const date = data.date ? new Date(data.date) : new Date(0);
-    const html = marked.parse(content.trim());
+    const raw = fs.readFileSync(path.join(postsDir, file), "utf-8").trim();
+    const lines = raw.split(/\r?\n/);
+    const firstLine = lines[0] || "";
+    const title = firstLine.replace(/^#\s*/, "").trim() || slug;
+    const bodyRaw = lines.slice(1).join("\n").trim();
+    const dateFromSlug = slug.slice(0, 10);
+    const date = /^\d{4}-\d{2}-\d{2}$/.test(dateFromSlug) ? new Date(dateFromSlug + "T12:00:00Z") : new Date(0);
+    const html = marked.parse(bodyRaw);
+    const firstParagraph = bodyRaw.split(/\n\s*\n/)[0] || "";
+    const description = firstParagraph.replace(/#+\s*|\*\*|__|\*|_/g, "").trim().slice(0, 160);
     return {
       slug,
-      title: data.title || slug,
-      description: data.description || "",
+      title,
+      description: description + (description.length >= 160 ? "…" : ""),
       date,
-      dateStr: formatDate(data.date),
+      dateStr: formatDate(date),
       html,
     };
   });

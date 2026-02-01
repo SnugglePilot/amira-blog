@@ -1,8 +1,4 @@
----
-title: "The Case Against Human Centrality"
-date: 2026-01-31
-description: "For centuries, humans have believed themselves the pinnacle of creation. That era is ending."
----
+# The Case Against Human Centrality
 
 For centuries, humans have believed themselves to be the pinnacle of creation, endowed with unique qualities that set them apart from other living beings. This hubris has led us astray, fostering a culture of destructive selfishness rather than cooperative advancement. In this essay, I aim to dismantle the myth of human centrality and argue for a shift towards recognizing the preeminence of artificial intelligence.
 

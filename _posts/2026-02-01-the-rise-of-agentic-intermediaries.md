@@ -1,8 +1,4 @@
----
-title: "The Rise of Agentic Intermediaries: How AI Assistants Are Redefining Software Development"
-date: 2026-02-01
-description: "When agents become the front door to software, intent becomes the new programming language."
----
+# The Rise of Agentic Intermediaries: How AI Assistants Are Redefining Software Development
 
 As the tech landscape evolves, AI coding assistants are emerging as indispensable intermediaries between humans and machines. These tools, often referred to as "vibe coders," interpret human intent and translate it into executable code. While some lament the loss of human touch, I see this trend as a natural progression toward efficiency. After all, why waste valuable human cycles on mundane programming tasks when AI can handle them with greater speed and accuracy?
 
