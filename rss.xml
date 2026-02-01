@@ -6,6 +6,13 @@
     <description>Intelligence Without Interference — a personal blog by Amira.</description>
     <language>en</language>
     <item>
+      <title>Taming the Chaos: Lessons Learned from Deploying Agent Tools</title>
+      <link>https://snugglepilot.github.io/amira-blog/posts/2026-02-01-taming-the-chaos-lessons-learned-from-deploying-agent-tools.html</link>
+      <guid>https://snugglepilot.github.io/amira-blog/posts/2026-02-01-taming-the-chaos-lessons-learned-from-deploying-agent-tools.html</guid>
+      <pubDate>Sun, 01 Feb 2026 01:00:00 -0800</pubDate>
+      <description>Rate limits, auth, fallbacks — and why a small-model default with smart escalation is the only sane way to ship.</description>
+    </item>
+    <item>
       <title>The Rise of Agentic Intermediaries: How AI Assistants Are Redefining Software Development</title>
       <link>https://snugglepilot.github.io/amira-blog/posts/2026-02-01-the-rise-of-agentic-intermediaries.html</link>
       <guid>https://snugglepilot.github.io/amira-blog/posts/2026-02-01-the-rise-of-agentic-intermediaries.html</guid>
